@@ -10,6 +10,8 @@ import {TodoServiceService} from "../shared/todo-service.service";
 export class MainComponent implements OnInit {
   tasks!: Task[];
   deleted = false;
+  newTask: string = '';
+
 
   constructor(private todoService: TodoServiceService) {  }
 
@@ -30,7 +32,7 @@ export class MainComponent implements OnInit {
       })
   }
 
-  delete(_id: string) {
+  delete(_id?: string) {
     this.todoService.deleteOne(_id).subscribe(
       {
         next: (response: any) => {
@@ -47,5 +49,23 @@ export class MainComponent implements OnInit {
         complete: () => console.log('deleteOne() abgeschlossen')
       });
   }
+
+  addTask() {
+    if (!this.newTask.trim()) return;
+
+    const newTask: Task = {
+      task: this.newTask,
+    };
+
+    this.todoService.addOne(newTask).subscribe({
+      next: (task) => {
+        console.log('Task hinzugefügt:', task);
+        this.tasks.push(task);
+        this.newTask = ''; // Eingabefeld zurücksezen
+      },
+      error: (err) => console.error('Fehler beim Hinzufügen des Tasks:', err),
+    });
+  }
+
 }
 

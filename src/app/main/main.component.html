@@ -4,8 +4,8 @@
   <h5>Meine Liste</h5>
 
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Neue Aufgabe einfügen" aria-label="Neue Aufgabe einfügen" aria-describedby="button-addon2">
-    <button class="btn btn-outline-success" type="button" id="button-addon2">
+    <input type="text" class="form-control" placeholder="Neue Aufgabe einfügen" aria-label="Neue Aufgabe einfügen" [(ngModel)]="newTask" aria-describedby="button-addon2" (keyup.enter)="addTask()">
+    <button class="btn btn-outline-success" type="button" id="button-addon2"  (click)="addTask()">
       <i class="bi bi-plus"></i>
     </button>
   </div>
