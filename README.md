@@ -1,27 +1,68 @@
-# Todos
+# todos
+Die todos-App ist eine einfache, aber leistungsfähige Anwendung zur Verwaltung von Aufgaben. Sie wurde entwickelt, um ein intuitives und schnelles Hinzufügen, Anzeigen und Löschen von Aufgaben direkt vom Dashboard aus zu ermöglichen.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+## Features
 
-## Development server
+- **Aufgabenliste**: Alle Aufgaben werden übersichtlich auf dem Dashboard angezeigt.
+- **Aufgabe hinzufügen**: Über ein Eingabefeld können neue Aufgaben zur Liste hinzugefügt werden.
+- **Aufgabe löschen**: Neben jeder Aufgabe befindet sich ein X-Symbol, mit dem sie aus der Liste entfernt werden kann.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![img.png](img.png)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Die todos-App ist in zwei Hauptteile unterteilt: das Frontend, entwickelt mit Angular, und das Backend, entwickelt mit Node.js. Um die Anwendung lokal zu starten, folgen Sie bitte den untenstehenden Anweisungen.
 
-## Build
+### Voraussetzungen
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (empfohlene Version: [v18.18.0])
+- npm (wird mit Node.js installiert)
+- Angular CLI (`npm install -g @angular/cli`) [version 17.3.1.]
 
-## Running unit tests
+### Frontend starten
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Klone das Frontend-Repository:
 
-## Running end-to-end tests
+```bash
+git clone `https://github.com/MeldaSardogan/todos-frontend.git`
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Installiere die Dependencies mit npm:
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Starte die Entwicklungsumgebung:
+
+```bash
+ng serve
+```
+
+Nachdem `ng serve` erfolgreich ausgeführt wurde, ist das Frontend auf `http://localhost:4200/` erreichbar.
+
+### Backend starten
+
+1. Klone das Backend-Repository:
+
+```bash
+git clone `https://github.com/MeldaSardogan/todos-backend.git`
+```
+
+2. Installiere die Dependencies mit npm:
+
+```bash
+npm install
+```
+
+3. Starte das Backend mit:
+
+```bash
+npm run watch
+```
+
+Das Backend läuft nun und wartet auf Anfragen von Ihrem Frontend.
+
+## Mitwirkende
+
+- [Melda Sardogan] - Initialer Entwickler
