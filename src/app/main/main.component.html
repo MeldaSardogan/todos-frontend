@@ -1,4 +1,6 @@
 <div class="container py-4">
+  <div *ngIf="!deleted" class="container mt-3">
+
   <h5>Meine Liste</h5>
 
   <div class="input-group mb-3">
@@ -9,18 +11,12 @@
   </div>
 
   <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      A list item
-        <button class="btn btn-outline-danger me-md-2" type="button">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let task of tasks; let i=index; ">
+      {{ task.task }}
+        <button class="btn btn-outline-danger me-md-2" type="button" (click)="delete(task._id)">
           <i class="bi bi-x"></i>
         </button>
     </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      A second list item
-      <button class="btn btn-outline-danger me-md-2" type="button">
-        <i class="bi bi-x"></i>
-      </button>
-    </li>
   </ul>
-
+  </div>
 </div>
