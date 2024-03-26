@@ -1,19 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {TodoServiceService} from "../shared/todo-service.service";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
-export class MainComponent implements OnInit {
-  tasks: any;
+export class MainComponent {
 
-  constructor(private todoService: TodoServiceService) {
-  }
+  constructor() {  }
 
-  ngOnInit(): void {
-    this.tasks = this.todoService.getTasks();
-    console.log(this.tasks)
-  }
 }
+
